@@ -1,2 +1,2 @@
-# autoThaiAdress
-Autocomplete for Thailand's adress. For Education
+# autoThaiAddress
+Autocomplete for Thailand's address. For Education
