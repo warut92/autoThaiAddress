@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Simple Autocomplete ที่อยู่แบบ (แบบง่าย ๆ)
+    <form action="">
+        ตำบล<br>
+        <input type="text" name="tambol" oninput="scearh(this)"><br>
+        <div id="adress"></div>
+        อำเภอ<br>
+        <input type="text" name="amphoe" oninput="scearh(this)"><br>
+        จังหวัด<br>
+        <input type="text" name="province" oninput="scearh(this)"><br>
+        รหัสไปรษณีย์<br>
+        <input type="text" name="postcode" oninput="scearh(this)">
+        <button type="reset">Reset form</button>
+    </form>
+    <script src="./data.js"></script>
+    <script src="./app.js"></script>
+</body>
+</html>
