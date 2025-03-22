@@ -1,35 +1,35 @@
 let RESULTS = []
-let scearhed_adress = document.getElementById('adress')
+let search_address = document.getElementById('address')
 
-function scearh(input_text) {
-    scearhed_adress.style.display = "block"
+function search(input_text) {
+    search_address.style.display = "block"
 
     let word_input = input_text.value
 
 //ที่อยู่
-thailand_adress = thailand_adress.replace(/\t/gm,"，")
-    const THAILAND_ADRESS = thailand_adress.split("\n")
+thailand_address = thailand_address.replace(/\t/gm,"，")
+    const THAILAND_ADdRESS = thailand_address.split("\n")
 
     if (word_input.length > 1) {
       let PATTERN = new RegExp(`(${(word_input)})`, "gm");
-      RESULTS = THAILAND_ADRESS.filter(function(str) {
+      RESULTS = THAILAND_ADdRESS.filter(function(str) {
         return PATTERN.test(str);
       });
       let results = RESULTS.toString()
-      .replace(/,/gm,"</span><br><span onclick=\"addAdress(this)\">")
-      scearhed_adress.innerHTML = "<span onclick=\"addAdress(this)\">" + results + "<br>"
+      .replace(/,/gm,"</span><br><span onclick=\"addAddress(this)\">")
+      search_address.innerHTML = "<small><span onclick=\"addAddress(this)\">" + results + "<br>"
 
     } else {
-        scearhed_adress.innerHTML = "ไม่พบที่อยู่...<br>"
+        search_address.innerHTML = "ไม่พบที่อยู่...<br>"
     }
   } 
 
-  function addAdress(whole_adress) {
-    const WHOLE_ADRESS = whole_adress.textContent.split("，")
-    document.querySelector('input[name="tambol"]').value = WHOLE_ADRESS[0]
-    document.querySelector('input[name="amphoe"]').value = WHOLE_ADRESS[1]
-    document.querySelector('input[name="province"]').value = WHOLE_ADRESS[2]
-    document.querySelector('input[name="postcode"]').value = WHOLE_ADRESS[3]
-    console.log(whole_adress.textContent);
-    scearhed_adress.style.display = "none"
+  function addAddress(whole_address) {
+    const WHOLE_ADdRESS = whole_address.textContent.split("，")
+    document.querySelector('input[name="tambol"]').value = WHOLE_ADdRESS[0]
+    document.querySelector('input[name="amphoe"]').value = WHOLE_ADdRESS[1]
+    document.querySelector('input[name="province"]').value = WHOLE_ADdRESS[2]
+    document.querySelector('input[name="postcode"]').value = WHOLE_ADdRESS[3]
+    console.log(whole_address.textContent);
+    search_address.style.display = "none"
   }
